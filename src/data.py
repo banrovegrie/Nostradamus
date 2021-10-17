@@ -5,6 +5,7 @@ import yfinance as yf
 from icecream import ic
 import datetime
 import math
+import mplfinance as mpf
 
 class Data:
     def __init__(self, tickerlist):
@@ -88,18 +89,98 @@ class Data:
             df.dropna(inplace=True)
             df['Uncertainty'] = self.uncertain(df)
             df['Deviation'] = self.deviation(df)
+            df.replace([np.inf, -np.inf], np.nan)
+            df.dropna(inplace=True)
             df = df.round(4)
             s_df = self.sustain(ticker)
             df.to_csv(f"../data/company/stock/{ticker}.csv")
-            ic(s_df)
             if s_df is not None:
                 s_df.to_csv(f"../data/company/sustain/{ticker}.csv")
 
     def getData(self):
+        data = []
         for ticker in self.tickerlist:
-            df = pd.read_csv(f"../data/company/{ticker}.csv")
-            s_df = self.sustain(ticker)
-            break
+            df = pd.read_csv(f"../data/company/stock/{ticker}.csv")
+            try:
+                s_df = pd.read_csv(f"../data/company/sustain/{ticker}.csv")
+            except:
+                s_df = None
+            data.append((df, s_df))
+        return data
+
+class Handle:
+    def __init__(self, d):
+        self.data = d.getData()
+        self.disasters = self.getDisasters()
+        self.tickerlist = d.tickerlist
+
+    def getDisasters(self):
+        return pd.read_csv('../data/disasters.csv')
+
+    def nine_eleven(self):
+        # 9/11
+        start_date = '2001-08-01'
+        end_date = '2001-10-31'
+        count = 0
+        for data in self.data:
+            df = data[0]
+            s_df = data[1]
+            start_location = np.where(df.Date == start_date)
+            end_location = np.where(df.Date == end_date)
+            dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
+            dfrange['Date']= pd.to_datetime(df['Date'])
+            dfrange.index = dfrange['Date']
+            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on 9/11", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2001-09-10', linewidths=20, alpha=0.4))
+            count += 1
+
+    def winter_storm(self):
+        # texas
+        start_date = '2021-01-04'
+        end_date = '2021-03-31'
+        count = 0
+        for data in self.data:
+            df = data[0]
+            s_df = data[1]
+            start_location = np.where(df.Date == start_date)
+            end_location = np.where(df.Date == end_date)
+            dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
+            dfrange['Date']= pd.to_datetime(df['Date'])
+            dfrange.index = dfrange['Date']
+            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on Texas Storm", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2021-02-12', linewidths=20, alpha=0.4))
+            count += 1
+
+    def katrina(self):
+        # hurricanes
+        start_date = '2005-07-01'
+        end_date = '2005-09-30'
+        count = 0
+        for data in self.data:
+            df = data[0]
+            s_df = data[1]
+            start_location = np.where(df.Date == start_date)
+            end_location = np.where(df.Date == end_date)
+            dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
+            dfrange['Date']= pd.to_datetime(df['Date'])
+            dfrange.index = dfrange['Date']
+            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on Katrina Hurricane", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2005-08-23', linewidths=20, alpha=0.4))
+            count += 1
+
+    def cali(self):
+        # wildfires
+        start_date = '2017-08-01'
+        end_date = '2018-02-28'
+        count = 0
+        for data in self.data:
+            df = data[0]
+            s_df = data[1]
+            start_location = np.where(df.Date == start_date)
+            end_location = np.where(df.Date == end_date)
+            dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
+            dfrange['Date']= pd.to_datetime(df['Date'])
+            dfrange.index = dfrange['Date']
+            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on Cali Wildfires", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2017-10-09', linewidths=20, alpha=0.4))
+            count += 1
+
 
 food = ["ADM", "BAYRY", "BG", "SMG"]
 tech = ["AAPL"]
@@ -107,10 +188,20 @@ oilngas = ["BP", "CVX", "XOM"]
 energy = ["EPD", "COP", "EOG", "NRG", "XEL"]
 elec = ["GNRC", "PPSI", "VST"]
 overall = ["SPY", "DIA"]
-d = Data(food +
-         tech +
-         oilngas +
-         energy +
-         elec + 
-         overall)
-d.saveData()
+# d = Data(['SPY', 'DIA', 'ALK'])
+# d.saveData()
+
+# d = Data(['SPY', 'NRG'])
+# d.saveData()
+
+# d = Data(['SPY', 'KMX', 'CHRW'])
+# d.saveData()
+
+d = Data(['SPY', 'PCG', 'EIX'])
+# d.saveData()
+
+h = Handle(d)
+# h.nine_eleven()
+# h.winter_storm()
+# h.katrina()
+h.cali()
