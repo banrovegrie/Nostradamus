@@ -1,12 +1,8 @@
 # Nostradamus: Weathering Worth
 
-<<<<<<< HEAD
 Our study explores the relation between the stock market, its volatility, and behavior versus weather conditions, environmental factors, and natural disasters. The objective is to establish correlations between such factors and the value of stocks and volume traded, so as to enable accurate modeling and interpretation based on the data.
 
-# Sources
-=======
 ## Sources
->>>>>>> 9f9deaf9b42100476075f805f0002b213cde2d38
 
 ### US stock market data
 
@@ -62,17 +58,11 @@ Some of the correlation values were extremely low (including negative values). A
 
 High values of correlation **usually** mean that there is an interdependence (Strong Correlation) between a stock and an environmental factor.
 
-<<<<<<< HEAD
-Consider the stock **BP** (British Petroleum Company) and the factor **CO2 emissions**:
-=======
 Consider the stock **BP** (British petroleum Company) and the factor **CO2 emissions**:
->>>>>>> 9f9deaf9b42100476075f805f0002b213cde2d38
 
 ![Untitled](assets/Untitled%201.png)
 
-These have a high correlation value of `0.8159` .
-
-We know that BP is an oil and gas company. Hence, it is very sensible reasoning that the company's production has a direct effect on the CO2 emission.
+These have a high correlation value of `0.8159`. We know that BP is an oil and gas company. Hence, it is very sensible reasoning that the company's production has a direct effect on the CO2 emission.
 
 Hence, we can infer that CO2 emission values are affected by BP's stock.
 
@@ -86,15 +76,7 @@ Consider the stock **AAPL** (Apple) ****and the factor **CO2 emissions from gase
 
 These two have a high correlation of **0.93.**
 
-<<<<<<< HEAD
-We know that Apple (a tech company), is obviously not dependent on CO2 emissions from gaseous fuel consumption. In spite of that, it has a high correlation with that factor.
-
-This is not a result of dependence between the two things. The high correlation is simply a coincidence as CO2 emissions from gaseous fuels are rising because of the rapid population growth and because nuclear and other clean energy sources are not very prevalent.
-=======
-We know know that Apple (a tech company), is obviously not dependent on CO2 emissions from gaseous fuel consumption. In spite of that, it has a high correlation with that factor.
-
-This is not a result of a dependence between the two things. The high correlation is simply a coincidence as CO2 emissions from gaseous fuels are rising because of the rapid population growth and because nuclear and other clean energy sources are not very prevalent.
->>>>>>> 9f9deaf9b42100476075f805f0002b213cde2d38
+We know that Apple (a tech company), is obviously not dependent on CO2 emissions from gaseous fuel consumption. In spite of that, it has a high correlation with that factor. This is not a result of dependence between the two things. The high correlation is simply a coincidence as CO2 emissions from gaseous fuels are rising because of the rapid population growth and because nuclear and other clean energy sources are not very prevalent.
 
 Hence Correlation is not always a result of Causation.
 
@@ -163,9 +145,15 @@ We will also explore what kind of effect Natural Disasters have on stock values.
 
 ### California Wildfires
 
-![Untitled](assets/Untitled%207.png)
+It is interesting how some companies are dependent on each other. Consider the California fires:
 
-(The blue line is the duration of the disaster)
+![Untitled](assets/Untitled%2016.png)
+
+![Untitled](assets/Untitled%2017.png)
+
+The stock of **PCG** which is a gas and electric company was affected right after the disaster took place. But now consider **EIX.** Its stock fell sharply sometime after **PCG**'s. We know that EIX depends on PCG for its production. This is also evident through the graph as its stock was not affected directly after the wildfires but a few days later.
+
+This gives clear information about the dependence of companies on each other. The blue line is the duration of the disaster.
 
 ### Katrina Hurricane
 
@@ -173,11 +161,7 @@ In August 2005, Katrina was a category 5 Atlantic hurricane that caused over 1,8
 
 Large transportation companies such as C.H. Robinson had to face a heavy loss due to denial of services. Since hurricanes leave a relatively smaller effect on companies, they are able to resume their services. so the loss is made back.
 
-![Untitled](assets/Untitled%208.png)
-
 ![Untitled](assets/Untitled%209.png)
-
-![Untitled](assets/Untitled%2010.png)
 
 ### Texas Storm
 
@@ -191,8 +175,6 @@ NRG suffered the most as can be seen in the following plots. It can also be emph
 
 ![Untitled](assets/Untitled%2011.png)
 
-![Untitled](assets/Untitled%2012.png)
-
 ### 9/11 Disaster
 
 Although 9/11 is not a natural disaster, it is worth considering how it affected the stock market. The effect is very visible on the entire stock market due to direct or indirect loss. As seen in the bottom graphs, the prices go down relatively fast after the event took place.
@@ -201,31 +183,7 @@ Due to its surprising nature, the impact's nature and magnitude were no less tha
 
 ![Untitled](assets/Untitled%2013.png)
 
-![Untitled](assets/Untitled%2014.png)
-
-![Untitled](assets/Untitled%2015.png)
-
-For all these disasters, stocks of companies that seemed related to those events were taken into consideration.
-
-In agreement with our hypothesis, the stocks of those companies suffered a heavy hit after those events.
-
-**Interdependence between companies**
-
-It is also interestingly evident from the graphs that some companies are dependent on each other.
-
-Consider the California fires:
-
-![Untitled](assets/Untitled%2016.png)
-
-![Untitled](assets/Untitled%2017.png)
-
-The stock of **PCG** which is a gas and electric company was affected right after the disaster took place.
-
-But now consider **EIX.** Its stock fell sharply sometime after **PCG**'s.
-
-We know that EIX depends on PCG for its production. This is also evident through the graph as its stock was not affected directly after the wildfires but a few days later.
-
-This gives clear information about the dependence of companies on each other.
+For all these disasters, stocks of companies that seemed related to those events were taken into consideration. In agreement with our hypothesis, the stocks of those companies suffered a heavy hit after those events.
 
 # Daily weather and Daily trades: No Correlation
 
