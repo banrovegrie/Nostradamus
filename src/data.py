@@ -18,6 +18,10 @@ class Data:
             threads=True
         )
 
+    def sustain(self, tickername):
+        ticker = yf.Ticker(tickername)
+        return ticker.sustainability
+
     def vwap(self, df):
         cv = 0
         values = []
@@ -85,12 +89,16 @@ class Data:
             df['Uncertainty'] = self.uncertain(df)
             df['Deviation'] = self.deviation(df)
             df = df.round(4)
-            df.to_csv(f"../data/company/{ticker}.csv")
+            s_df = self.sustain(ticker)
+            df.to_csv(f"../data/company/stock/{ticker}.csv")
+            ic(s_df)
+            if s_df is not None:
+                s_df.to_csv(f"../data/company/sustain/{ticker}.csv")
 
     def getData(self):
         for ticker in self.tickerlist:
             df = pd.read_csv(f"../data/company/{ticker}.csv")
-            ic(df)
+            s_df = self.sustain(ticker)
             break
 
 food = ["ADM", "BAYRY", "BG", "SMG"]
