@@ -6,8 +6,8 @@ from icecream import ic
 import datetime
 
 class Data:
-    def __init__(self, tickers):
-        self.tickerlist = tickers
+    def __init__(self, tickerlist):
+        self.tickerlist = tickerlist
 
     def downloadData(self):
         return yf.download(
@@ -34,6 +34,17 @@ class Data:
 
         return values
 
+    def uncertain(self, df):
+        values = []
+        for index, rows in df.iterrows():
+            wick = rows['High'] - rows['Low']
+            candle = abs(rows['Open'] - rows['Close'])
+            if candle == 0:
+                candle = 0.0001
+            uncertainty = (wick - candle)/candle
+            values.append(uncertainty)
+        return values
+
     def saveData(self):
         mixed = self.downloadData()
         columns = ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']
@@ -43,10 +54,11 @@ class Data:
                 data.append(mixed[(c, ticker)])
             df = pd.DataFrame(data).T
             df.columns = columns
+            df.loc[df['Open'] == 0] = float('NaN')
             df.dropna(inplace=True)
-            df['Date'] = df.index
             df['VWAP'] = self.vwap(df)
             df.dropna(inplace=True)
+            df['Uncertainty'] = self.uncertain(df)
             df.to_csv(f"../data/company/{ticker}.csv")
 
     def getData(self):
@@ -55,11 +67,16 @@ class Data:
             ic(df)
             break
 
-d = Data( [
-          "ADM", "BAYRY", "BG", "SMG"
-          "AAPL", "BP", "CVX", 
-          "XOM", "EPD", "COP", "EOG", "NRG", "XEL",  # energy companies
-          "GNRC", "PPSI", "VST" # electronics
-
-         ])
-d.getData()
+food = ["ADM", "BAYRY", "BG", "SMG"]
+tech = ["AAPL"]
+oilngas = ["BP", "CVX", "XOM"]
+energy = ["EPD", "COP", "EOG", "NRG", "XEL"]
+elec = ["GNRC", "PPSI", "VST"]
+overall = ["SPY", "DIA"]
+d = Data(food +
+         tech +
+         oilngas +
+         energy +
+         elec + 
+         overall)
+d.saveData()
