@@ -45,6 +45,9 @@ class Data:
             values.append(uncertainty)
         return values
 
+    def movingAvg(self, df, days):
+        return df.iloc[:, 1].rolling(window=days).mean().round(4)
+
     def saveData(self):
         mixed = self.downloadData()
         columns = ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']
@@ -54,11 +57,14 @@ class Data:
                 data.append(mixed[(c, ticker)])
             df = pd.DataFrame(data).T
             df.columns = columns
+            df['MA_5'] = self.movingAvg(df, 5)
+            df['MA_50'] = self.movingAvg(df, 50)
             df.loc[df['Open'] == 0] = float('NaN')
             df.dropna(inplace=True)
             df['VWAP'] = self.vwap(df)
             df.dropna(inplace=True)
             df['Uncertainty'] = self.uncertain(df)
+            df = df.round(4)
             df.to_csv(f"../data/company/{ticker}.csv")
 
     def getData(self):
