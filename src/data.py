@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 from icecream import ic
 import datetime
+import math
 
 class Data:
     def __init__(self, tickerlist):
@@ -48,6 +49,24 @@ class Data:
     def movingAvg(self, df, days):
         return df.iloc[:, 1].rolling(window=days).mean().round(4)
 
+    def deviation(self, df):
+        subtract = []
+        count = 0
+        i = 0
+        values = []
+        for index, rows in df.iterrows():
+            s = rows['Close'] - rows['MA_50']
+            subtract.append(s**2) # (x - x')^2
+            window = min(count + 1, 50)
+            numerator = sum(subtract[i:i+window]) # sigma (x - x')^2
+            values.append(math.sqrt(numerator/window))
+            count += 1
+            if count >= 50:
+                i += 1
+        
+        return values
+
+
     def saveData(self):
         mixed = self.downloadData()
         columns = ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']
@@ -64,6 +83,7 @@ class Data:
             df['VWAP'] = self.vwap(df)
             df.dropna(inplace=True)
             df['Uncertainty'] = self.uncertain(df)
+            df['Deviation'] = self.deviation(df)
             df = df.round(4)
             df.to_csv(f"../data/company/{ticker}.csv")
 
