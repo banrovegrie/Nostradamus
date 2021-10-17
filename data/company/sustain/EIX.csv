@@ -1,28 +1,3 @@
-2021-9,Value
-palmOil,False
-controversialWeapons,False
-gambling,False
-socialScore,10.57
-nuclear,True
-furLeather,False
-alcoholic,False
-gmo,False
-catholic,False
-socialPercentile,
-peerCount,103
-governanceScore,6.36
-environmentPercentile,
-animalTesting,False
-tobacco,False
-totalEsg,27.26
-highestControversy,3
-esgPerformance,AVG_PERF
-coal,False
-pesticides,False
-adult,False
-percentile,49.31
-peerGroup,Utilities
-smallArms,False
-environmentScore,10.32
-governancePercentile,
-militaryContract,False
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0d2e3a96eaad15de9f4bc06a543ace3804f00e99b57fbb5fc51105a4df1b611
+size 489
