@@ -1,3 +1,5 @@
+# Nostradamus
+
 # Sources
 
 ### US stock market data
@@ -83,7 +85,7 @@ where $r_{xy}$ is the value of correlation (or the correlation coefficient) betw
 
 Here are the results:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b722a7c1-973c-4282-9cce-3395c12a2ada/Untitled.png)
+![Untitled](assets/Untitled.png)
 
 Normalized data for both emission levels and stock values
 versatile stocks are visible very clearly due to the normalization
@@ -100,7 +102,7 @@ High values of correlation **usually** mean that there is an interdependence (St
 
 Consider the stock **BP** (British petroleum Company) and the factor **CO2 emmissions**:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b79741f3-68fd-43dd-9c18-caa9818ee1d1/Untitled.png)
+![Untitled](assets/Untitled%201.png)
 
 These have a high correlation value of `0.8159` .
 
@@ -114,7 +116,7 @@ It is not always true that a high value of correlation means that there is an in
 
 Consider the stock **AAPL** (Apple) ****and the factor **CO2 emissions from gaseous fuel consumption:**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1414ae47-871d-4cba-84a8-d648975cd3fe/Untitled.png)
+![Untitled](assets/Untitled%202.png)
 
 These two have a high correlation of **0.93.**
 
@@ -135,7 +137,7 @@ There are two possible explanations to this:
 
 Consider the stock **EOD** (Wells Fargo Global) and the factor **CO2 emmissions:**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3bfa2aaa-9bf1-4161-9938-61b82acc8054/Untitled.png)
+![Untitled](assets/Untitled%203.png)
 
 This has a high correlation value of **0.927**.
 
@@ -153,7 +155,7 @@ A low positive correlation usually means that the stock and the environmental fa
 
 Consider **XOM** and **Agricultural Methane Emissions**.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f41a65a2-470d-4de4-8066-fdbf34c90bc4/Untitled.png)
+![Untitled](assets/Untitled%204.png)
 
 This has a low correlation of **0.234**
 
@@ -167,7 +169,7 @@ Highly negative values of correlation **usually** imply an inverse effect betwee
 
 Consider the volume of the stock **CVX** (Chevron Corporation) ****and the factor **Terrestrial and marine protected areas**.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cb1408b8-e84d-4165-8e60-8850162a6ebc/Untitled.png)
+![Untitled](assets/Untitled%205.png)
 
 This has a highly negative correlation of **-0.899**
 
@@ -177,7 +179,7 @@ Hence, a highly negative correlation value means inverse dependence.
 
 ### Predictions
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b78d07c4-90bd-45c9-895c-e999f556aa90/Untitled.png)
+![Untitled](assets/Untitled%206.png)
 
 The global emission levels are predicted to be stranded due to growing awareness about climate change and a noticeable switch to renewable sources as a primary energy sources.
 
@@ -189,7 +191,7 @@ We will also explore what kind of effect Natural Disasters have on stock values.
 
 ### California Wildfires
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3c45102-2861-420e-9db2-ebdd47c91ced/Untitled.png)
+![Untitled](assets/Untitled%207.png)
 
 (The blue line is the duration of the disaster)
 
@@ -199,11 +201,11 @@ In August 2005, Katrina was a category 5 Atlantic hurricane that caused over 1,8
 
 Large transportation companies such as C.H. Robinson had to face a heavy loss due to denial of services. Since hurricanes leave a relatively smaller effect on companies, they are able to resume their services. so the loss is made back.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59687db6-f8f5-47d4-8bf3-294173e2eae5/Untitled.png)
+![Untitled](assets/Untitled%208.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b7a47dc-cbbd-4b17-8fd9-70fd29078d7d/Untitled.png)
+![Untitled](assets/Untitled%209.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/239daf6b-eceb-4db9-a193-125714fa38f0/Untitled.png)
+![Untitled](assets/Untitled%2010.png)
 
 ### Texas Storm
 
@@ -215,9 +217,9 @@ The Texas Grid failure was majorly caused by the inadequately winterized natural
 
 NRG suffered the most as can be seen in the following plots. It can also be emphasized that the analysis has to be done on a small time scale as companies often bounce back from such losses over a longer period of time such as a year. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/395c4d40-03f1-4321-baf4-0fd838755aa2/Untitled.png)
+![Untitled](assets/Untitled%2011.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/61ff780c-8146-466d-b5c8-0243017c1541/Untitled.png)
+![Untitled](assets/Untitled%2012.png)
 
 ### 9/11
 
@@ -225,11 +227,11 @@ Although 9/11 is not a natural disaster, it is worth considering how it affected
 
 Due to its surprising nature, the impact's nature and magnitude were no less than a natural disaster over the country.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c460b436-c7b3-4b52-8435-0cc736f4848a/Untitled.png)
+![Untitled](assets/Untitled%2013.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/102dfa63-2873-4bcc-8e03-967f92d18f6f/Untitled.png)
+![Untitled](assets/Untitled%2014.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d2346de2-f249-4296-b868-bd011f1aaea6/Untitled.png)
+![Untitled](assets/Untitled%2015.png)
 
 For all these disasters, stocks of companies that seemed related to those events were taken into consideration.
 
@@ -241,9 +243,9 @@ It is also interestingly evident from the graphs that some companies are depende
 
 Consider the California fires:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5319a0b0-7b03-435d-9f24-6872f41481f9/Untitled.png)
+![Untitled](assets/Untitled%2016.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f770bb6-5e2d-4058-b4b2-b7da30c2f803/Untitled.png)
+![Untitled](assets/Untitled%2017.png)
 
 The stock of **PCG** which is a gas and electric company was affected right after the disaster took place.
 
@@ -261,9 +263,9 @@ The example of correlation and not causation can further be understood by consid
 
 ### Lack of Data
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4bb03290-affc-49ef-9cb7-176a94f1a854/Untitled.png)
+![Untitled](assets/Untitled%2018.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/70fa3fd5-aa9b-4f79-aec5-b6d27ef0b144/Untitled.png)
+![Untitled](assets/Untitled%2019.png)
 
 If the stock history of the industrial revolution times along with the carbon emission levels of the same was available, it can be seen that the rising workforce and demand directly meant a rise in carbon levels. This is a correlation due to common sources of the rise.
 
