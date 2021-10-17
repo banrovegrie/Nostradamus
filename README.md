@@ -147,55 +147,7 @@ We will also explore what kind of effect Natural Disasters have on stock values.
 
 ### California Wildfires
 
-![Untitled](assets/Untitled%207.png)
-
-(The blue line is the duration of the disaster)
-
-### Katrina Hurricane
-
-In August 2005, Katrina was a category 5 Atlantic hurricane that caused over 1,800 deaths and $125 billion in damage. This damage was mainly focused on New Orleans and the surrounding areas.
-
-Large transportation companies such as C.H. Robinson had to face a heavy loss due to denial of services. Since hurricanes leave a relatively smaller effect on companies, they are able to resume their services. so the loss is made back.
-
-![Untitled](assets/Untitled%208.png)
-
-![Untitled](assets/Untitled%209.png)
-
-![Untitled](assets/Untitled%2010.png)
-
-### Texas Storm
-
-In February 2021, the state of Texas suffered a major power crisis, which came about as a result of three severe winter storms sweeping across the United States. The storms caused a massive electricity generation failure in the entire state leading to shortages of water, food, and heat.
-
-More than 4.5 million homes and businesses were left without power, at least 210 people were killed directly or indirectly with some estimates going as high as 702.
-
-The Texas Grid failure was majorly caused by the inadequately winterized natural gas equipment.
-
-NRG suffered the most as can be seen in the following plots. It can also be emphasized that the analysis has to be done on a small time scale as companies often bounce back from such losses over a longer period of time such as a year. 
-
-![Untitled](assets/Untitled%2011.png)
-
-![Untitled](assets/Untitled%2012.png)
-
-### 9/11 Disaster
-
-Although 9/11 is not a natural disaster, it is worth considering how it affected the stock market. The effect is very visible on the entire stock market due to direct or indirect loss. As seen in the bottom graphs, the prices go down relatively fast after the event took place.
-
-Due to its surprising nature, the impact's nature and magnitude were no less than a natural disaster over the country.
-
-![Untitled](assets/Untitled%2013.png)
-
-![Untitled](assets/Untitled%2014.png)
-
-![Untitled](assets/Untitled%2015.png)
-
-For all these disasters, stocks of companies that seemed related to those events were taken into consideration.
-
-In agreement to our hypothesis, the stocks of those companies suffered a heavy hit after those events.
-
-**Interdependence between companies**
-
-It is also interestingly evident from the graphs that some companies are dependent on each other.
+It is also interesting how some companies are dependent on each other.
 
 Consider the California fires:
 
@@ -211,7 +163,36 @@ We know that EIX depends on PCG for its production. This is also evident through
 
 This gives clear information about dependence of companies on each other. 
 
- 
+
+### Katrina Hurricane
+
+In August 2005, Katrina was a category 5 Atlantic hurricane that caused over 1,800 deaths and $125 billion in damage. This damage was mainly focused on New Orleans and the surrounding areas.
+
+Large transportation companies such as C.H. Robinson had to face a heavy loss due to denial of services. Since hurricanes leave a relatively smaller effect on companies, they are able to resume their services. so the loss is made back.
+
+![Untitled](assets/Untitled%209.png)
+
+### Texas Storm
+
+In February 2021, the state of Texas suffered a major power crisis, which came about as a result of three severe winter storms sweeping across the United States. The storms caused a massive electricity generation failure in the entire state leading to shortages of water, food, and heat.
+
+More than 4.5 million homes and businesses were left without power, at least 210 people were killed directly or indirectly with some estimates going as high as 702.
+
+The Texas Grid failure was majorly caused by the inadequately winterized natural gas equipment.
+
+NRG suffered the most as can be seen in the following plots. It can also be emphasized that the analysis has to be done on a small time scale as companies often bounce back from such losses over a longer period of time such as a year. 
+
+![Untitled](assets/Untitled%2011.png)
+
+### 9/11 Disaster
+
+Although 9/11 is not a natural disaster, it is worth considering how it affected the stock market. The effect is very visible on the entire stock market due to direct or indirect loss. As seen in the bottom graphs, the prices go down relatively fast after the event took place.
+
+Due to its surprising nature, the impact's nature and magnitude were no less than a natural disaster over the country.
+
+![Untitled](assets/Untitled%2013.png)
+
+For all these disasters, stocks of companies that seemed related to those events were taken into consideration. In agreement to our hypothesis, the stocks of those companies suffered a heavy hit after those events. 
 
 ## Industrial Revolution
 
