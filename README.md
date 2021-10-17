@@ -14,9 +14,9 @@
 
 ### Finding Correlations with Environmental Factors
 
-From our environmental dataset, we first analyze the factors that can affect stocks or the other way: companies have an effect on these factors.
+From our environmental data-set, we first analyze the factors that can affect stocks or the other way: companies have an effect on these factors.
 
-For example, the following environmental factors were present in our dataset, among others:
+For example, the following environmental factors were present in our data-set, among others:
 
 ```
 Use of potash
@@ -44,7 +44,7 @@ Here are the results:
 
 ![Untitled](assets/Untitled.png)
 
-Here, we have normalized values of Open, Close and Volume of several stocks contrasted with normalized values of several environmental factors, meant to depeict whether there is any sign of possible correlation.
+Here, we have normalized values of Open, Close and Volume of several stocks contrasted with normalized values of several environmental factors, meant to depict whether there is any sign of possible correlation.
 
 ### Inferences
 
@@ -56,17 +56,17 @@ Some of the correlation values were extremely low (including negative values). A
 
 High values of correlation **usually** mean that there is an interdependence (Strong Correlation) between a stock and an environmental factor.
 
-Consider the stock **BP** (British petroleum Company) and the factor **CO2 emmissions**:
+Consider the stock **BP** (British petroleum Company) and the factor **CO2 emissions**:
 
 ![Untitled](assets/Untitled%201.png)
 
 These have a high correlation value of `0.8159` .
 
-We know that BP is an oil and gas company. Hence, it is very sensible reasoning that the company's production has a direct effect on the CO2 emmission.
+We know that BP is an oil and gas company. Hence, it is very sensible reasoning that the company's production has a direct effect on the CO2 emission.
 
-Hence, we can infer that CO2 emmission values are affected by BP's stock.
+Hence, we can infer that CO2 emission values are affected by BP's stock.
 
-**Causation $\neq$ Correlation.**
+**Causation not equal to Correlation.**
 
 It is not always true that a high value of correlation means that there is an interdependence between the stocks.
 
@@ -76,9 +76,9 @@ Consider the stock **AAPL** (Apple) ****and the factor **CO2 emissions from gase
 
 These two have a high correlation of **0.93.**
 
-We know know that Apple (a tech company), is obviously not dependent on CO2 emmissions from gaseous fuel consumption. Inspite of that, it has a high correlation with that factor.
+We know know that Apple (a tech company), is obviously not dependent on CO2 emissions from gaseous fuel consumption. In spite of that, it has a high correlation with that factor.
 
-This is not a result of a dependence between the two things. The high correlation is simply a coincidence as CO2 emmissions from gaseous fuels are rising because of the rapid population growth and because nuclear and other clean energy sources are not very prevalant.
+This is not a result of a dependence between the two things. The high correlation is simply a coincidence as CO2 emissions from gaseous fuels are rising because of the rapid population growth and because nuclear and other clean energy sources are not very prevalent.
 
 Hence Correlation is not always a result of Causation.
 
@@ -91,13 +91,13 @@ There are two possible explanations to this:
 - It is a coincidence (as shown above)
 - Or it has a hidden correlation
 
-Consider the stock **EOD** (Wells Fargo Global) and the factor **CO2 emmissions:**
+Consider the stock **EOD** (Wells Fargo Global) and the factor **CO2 emissions:**
 
 ![Untitled](assets/Untitled%203.png)
 
 This has a high correlation value of **0.927**.
 
-On first thought, it seems like Well Fargo Global, a finance company is unrelated to CO2 emmissions.
+On first thought, it seems like Well Fargo Global, a finance company is unrelated to CO2 emissions.
 
 However, it is likely that there are hidden correlations due to dependencies of carbon emissions on an industry which also determines whether the prices of companies which own/invest in the same.
 
