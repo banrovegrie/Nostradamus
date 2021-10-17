@@ -1,6 +1,6 @@
-# Nostradamus
+# Nostradamus: Weathering Worth
 
-# Sources
+## Sources
 
 ### US stock market data
 
@@ -12,64 +12,21 @@
 - Knoema Environmental Data Atlas
 - NOAA Climate Data Online
 
-# Finding Correlations with Environmental Factors
-
-## Environmental Factors
+### Finding Correlations with Environmental Factors
 
 From our environmental dataset, we first analyze the factors that can affect stocks or the other way: companies have an effect on these factors.
 
-The following environmental factors were present in our dataset:
+For example, the following environmental factors were present in our dataset, among others:
 
 ```
-CO2 emissions from electricity production (%)
-Other greenhouse gas emissions
-Threatened mammal species
-Agricultural methane emissions (%)
 Use of potash
-CO2 emissions from gaseous fuel consumption (%)
-CO2 emissions from gas flaring
 Methane emissions
-CO2 emissions per capita
-Nitrous oxide emissions
-CO2 emissions: transport (%)
-Marine protected areas
-Consumption of methyl bromide
-CO2 emissions from solid fuel consumption (%)
-Terrestrial protected areas
-CO2 emissions from fossil-fuels
-Quantity of municipal waste collected
-Consumption chlorofluorocarbons
-Nitrous oxide emissions in energy
-CO2 emissions from bunker fuels
-CO2 emissions from manufacturing industries (%)
-CO2 emissions from gas fuel consumption
-Threatened fish species
-CO2 emissions from cement production
-Threatened plant species
-Threatened bird species
-CO2 emissions from other sectors (%)
-CO2 emissions from liquid fuel consumption
-PM2.5 air pollution
-Consumption of hydrochlorofluorocarbons
-Agricultural nitrous oxide emissions (%)
-CO2 emissions from solid fuel consumption
 CO2 emissions
 Terrestrial and marine protected areas
-CO2 emissions intensity
-Use of phosphate
-Methane emissions in energy sector
 CO2 emissions from gaseous fuel consumption
 CO2 intensity
 Use of nitrogen
-Agricultural nitrous oxide emissions
-CO2 emissiocompanies it had an impact on.ns: residential buildings (%)
-Energy related methane emissions
-Agricultural methane emissions
-CO2 emissions from liquid fuel consumption (%)
-Consumption of ozone-depleting substances
 ```
-
----
 
 ### Correlating with Stocks
 
@@ -79,16 +36,15 @@ We plotted the yearly average open prices of these stocks. We also plotted the y
 
 Along with the plots, we also found out the value of correlation between the average yearly opening prices and the yearly value for the environmental factors.
 
-$r_{xy} = \dfrac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2\sum(y_i - \bar{y})^2}}$
+![img](https://cdn.discordapp.com/attachments/809873815050911798/899330204676272128/unknown.png)
 
-where $r_{xy}$ is the value of correlation (or the correlation coefficient) between $x$ and $y$.
+where rxy is the value of correlation (or the correlation coefficient) between x and y.
 
 Here are the results:
 
 ![Untitled](assets/Untitled.png)
 
-Normalized data for both emission levels and stock values
-versatile stocks are visible very clearly due to the normalization
+Here, we have normalized values of Open, Close and Volume of several stocks contrasted with normalized values of several environmental factors, meant to depeict whether there is any sign of possible correlation.
 
 ### Inferences
 
@@ -221,7 +177,7 @@ NRG suffered the most as can be seen in the following plots. It can also be emph
 
 ![Untitled](assets/Untitled%2012.png)
 
-### 9/11
+### 9/11 Disaster
 
 Although 9/11 is not a natural disaster, it is worth considering how it affected the stock market. The effect is very visible on the entire stock market due to direct or indirect loss. As seen in the bottom graphs, the prices go down relatively fast after the event took place.
 
