@@ -130,7 +130,7 @@ class Handle:
             dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
             dfrange['Date']= pd.to_datetime(df['Date'])
             dfrange.index = dfrange['Date']
-            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on 9/11", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2001-09-10', linewidths=20, alpha=0.4))
+            mpf.plot(dfrange, type='candle', style='yahoo', mav=(5, 10, 20), volume=True, vlines=dict(vlines='2001-09-10', linewidths=20, alpha=0.4))
             count += 1
 
     def winter_storm(self):
@@ -146,7 +146,7 @@ class Handle:
             dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
             dfrange['Date']= pd.to_datetime(df['Date'])
             dfrange.index = dfrange['Date']
-            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on Texas Storm", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2021-02-12', linewidths=20, alpha=0.4))
+            mpf.plot(dfrange, type='candle', style='yahoo', mav=(5, 10, 20), volume=True, vlines=dict(vlines='2021-02-12', linewidths=20, alpha=0.4))
             count += 1
 
     def katrina(self):
@@ -162,7 +162,7 @@ class Handle:
             dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
             dfrange['Date']= pd.to_datetime(df['Date'])
             dfrange.index = dfrange['Date']
-            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on Katrina Hurricane", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2005-08-23', linewidths=20, alpha=0.4))
+            mpf.plot(dfrange, type='candle', style='yahoo', mav=(5, 10, 20), volume=True, vlines=dict(vlines='2005-08-23', linewidths=20, alpha=0.4))
             count += 1
 
     def cali(self):
@@ -178,7 +178,7 @@ class Handle:
             dfrange = df.iloc[start_location[0][0]:end_location[0][0]]
             dfrange['Date']= pd.to_datetime(df['Date'])
             dfrange.index = dfrange['Date']
-            mpf.plot(dfrange, type='candle', style='yahoo', title=f"{self.tickerlist[count]} on Cali Wildfires", mav=(5, 10, 20), volume=True, vlines=dict(vlines='2017-10-09', linewidths=20, alpha=0.4))
+            mpf.plot(dfrange, type='candle', style='yahoo', mav=(5, 10, 20), volume=True, vlines=dict(vlines='2017-10-09', linewidths=20, alpha=0.4))
             count += 1
 
 
@@ -188,20 +188,23 @@ oilngas = ["BP", "CVX", "XOM"]
 energy = ["EPD", "COP", "EOG", "NRG", "XEL"]
 elec = ["GNRC", "PPSI", "VST"]
 overall = ["SPY", "DIA"]
+
 # d = Data(['SPY', 'DIA', 'ALK'])
 # d.saveData()
+# h = Handle(d)
+# h.nine_eleven()
 
 # d = Data(['SPY', 'NRG'])
 # d.saveData()
+# h = Handle(d)
+# h.winter_storm()
 
 # d = Data(['SPY', 'KMX', 'CHRW'])
 # d.saveData()
+# h = Handle(d)
+# h.katrina()
 
 d = Data(['SPY', 'PCG', 'EIX'])
-# d.saveData()
-
+d.saveData()
 h = Handle(d)
-# h.nine_eleven()
-# h.winter_storm()
-# h.katrina()
 h.cali()
